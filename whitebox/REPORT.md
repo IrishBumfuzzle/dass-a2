@@ -41,3 +41,7 @@
 - Updated all references to use new decks dict structure
 - Removed running attribute
 - Extracted card action handling into separate private methods to reduce branching error
+
+**Iteration 7** (config.py)
+- Added module docstring for documentation
+
