@@ -1,22 +1,21 @@
+"""Defines the Property and PropertyGroup classes for MoneyPoly."""
+
 class Property:
     """Represents a single purchasable property tile on the MoneyPoly board."""
 
     FULL_GROUP_MULTIPLIER = 2
 
-    def __init__(self, name, position, price, base_rent, group=None):
+    def __init__(self, name, position, price, base_rent):
         self.name = name
         self.position = position
         self.price = price
         self.base_rent = base_rent
-        self.mortgage_value = price // 2
+        # self.mortgage_value = price // 2
         self.owner = None
         self.is_mortgaged = False
-        self.houses = 0
+        # self.houses = 0
 
-        # Register with the group immediately on creation
-        self.group = group
-        if group is not None and self not in group.properties:
-            group.properties.append(self)
+        self.group = None
 
     def get_rent(self):
         """
@@ -38,7 +37,7 @@ class Property:
         if self.is_mortgaged:
             return 0
         self.is_mortgaged = True
-        return self.mortgage_value
+        return self.price // 2
 
     def unmortgage(self):
         """
@@ -47,10 +46,9 @@ class Property:
         """
         if not self.is_mortgaged:
             return 0
-        else:
-            cost = int(self.mortgage_value * 1.1)
-            self.is_mortgaged = False
-            return cost
+        cost = int(self.price // 2 * 1.1)
+        self.is_mortgaged = False
+        return cost
 
     def is_available(self):
         """Return True if this property can be purchased (unowned, not mortgaged)."""
@@ -62,6 +60,12 @@ class Property:
 
 
 class PropertyGroup:
+    """A collection of related `Property` tiles (a colour group).
+
+    Holds a list of `Property` instances that belong to this group and
+    provides convenience methods for ownership checks and counts.
+    """
+
     def __init__(self, name, color):
         self.name = name
         self.color = color
