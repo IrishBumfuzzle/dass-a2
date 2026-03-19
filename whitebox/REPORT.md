@@ -48,3 +48,8 @@
 **Iteration 8** (player.py)
 - Removed unused variable from move() method
 
+**Iteration 9** (dice.py)
+- Added module docstring
+- Removed unused import of BOARD_SIZE
+- Moved doubles_streak attribute initialization into __init__
+
