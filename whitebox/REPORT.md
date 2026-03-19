@@ -45,3 +45,6 @@
 **Iteration 7** (config.py)
 - Added module docstring for documentation
 
+**Iteration 8** (player.py)
+- Removed unused variable from move() method
+
