@@ -172,7 +172,7 @@ class Game:
             print(f"  {prop.name} is already mortgaged.")
             return False
         player.add_money(payout)
-        self.bank.collect(-payout)
+        self.bank.pay_out(payout)
         print(f"  {player.name} mortgaged {prop.name} and received ${payout}.")
         return True
 
@@ -208,6 +208,7 @@ class Game:
 
         buyer.deduct_money(cash_amount)
         prop.owner = buyer
+        seller.add_money(cash_amount)
         seller.remove_property(prop)
         buyer.add_property(prop)
         print(
