@@ -46,11 +46,16 @@ class Player:
         if steps == 0:
             return self.position
 
-        self.position = (self.position + steps) % BOARD_SIZE
+        old_pos = self.position
+        raw_new = old_pos + steps
+        self.position = raw_new % BOARD_SIZE
 
-        if self.position == 0:
+        if raw_new >= BOARD_SIZE:
             self.add_money(GO_SALARY)
-            print(f"  {self.name} landed on Go and collected ${GO_SALARY}.")
+            if self.position == 0:
+                print(f"  {self.name} landed on Go and collected ${GO_SALARY}.")
+            else:
+                print(f"  {self.name} passed Go and collected ${GO_SALARY}.")
 
         return self.position
 
