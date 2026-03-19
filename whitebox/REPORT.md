@@ -29,3 +29,15 @@
 - Added docstring
 - Remove unused var
 - Removed is_elim attr
+
+**Iteration 6** (game.py)
+- Added docstring
+- Made fstring to normal string
+- Removed unused imports
+- Removed unnecessary parens after not keyword
+- Added final newline
+- Removed setting player is eliminated
+- Consolidated chance_deck and community_deck into a dictionary to reduce instance attributes
+- Updated all references to use new decks dict structure
+- Removed running attribute
+- Extracted card action handling into separate private methods to reduce branching error
