@@ -22,3 +22,10 @@
 **Iteration 4** (boards.py)
 - == True to just checking true
 - Added docstring
+
+**Iteration 5** (player.py)
+- Remove import
+- Add final newline
+- Added docstring
+- Remove unused var
+- Removed is_elim attr
