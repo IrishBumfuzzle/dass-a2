@@ -57,3 +57,7 @@
 - Added module docstring
 - Added Bank class docstring for clarity
 - Removed unused math import
+
+**Iteration 11** (ui.py)
+- Added module docstring
+- Specified exception type (ValueError)
