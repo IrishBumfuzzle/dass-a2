@@ -14,3 +14,8 @@
 - Removed argument from Property class
 - Removed the else after return in Property.unmortage
 - Added docstring to PropertyGroup
+
+**Iteration 3** (cards.py)
+- Formatted to have smaller length lines
+- Added docstring
+
