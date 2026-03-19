@@ -1,2 +1,5 @@
 quickcart
 QuickCart System.md
+__pycache__/
+.pytest_cache/
+out/
