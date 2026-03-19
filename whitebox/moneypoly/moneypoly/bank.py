@@ -19,8 +19,9 @@ class Bank:
         Receive funds into the bank (taxes, fines, auction proceeds, etc.).
         Negative amounts are silently ignored.
         """
-        self._funds += amount
-        self._total_collected += amount
+        if amount > 0:
+            self._funds += amount
+            self._total_collected += amount
 
     def pay_out(self, amount):
         """
