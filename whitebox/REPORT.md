@@ -19,3 +19,6 @@
 - Formatted to have smaller length lines
 - Added docstring
 
+**Iteration 4** (boards.py)
+- == True to just checking true
+- Added docstring
