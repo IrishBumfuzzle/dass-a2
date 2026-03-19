@@ -53,3 +53,7 @@
 - Removed unused import of BOARD_SIZE
 - Moved doubles_streak attribute initialization into __init__
 
+**Iteration 10** (bank.py)
+- Added module docstring
+- Added Bank class docstring for clarity
+- Removed unused math import
