@@ -3,3 +3,4 @@ QuickCart System.md
 __pycache__/
 .pytest_cache/
 out/
+quickcart_image_x86.tar
