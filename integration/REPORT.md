@@ -1,5 +1,8 @@
 # Integration Testing Report
 
+## Call graph
+![](diagrams/1.jpg)
+
 ## 1. Fundamental Race Setup Integration (`TestCase1_Valid`)
 - **Modules Involved:** `Registration`, `CrewManager`, `Inventory`, `RaceManager`
 - **Scenario:** Registering a driver, assigning a role, adding a car, creating an event, and assigning them to a race lineup. Also trying to assign a lineup where the car doesn't exist.

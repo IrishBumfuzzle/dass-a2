@@ -1,7 +1,9 @@
 # Whitebox testing
 
 ## 1.1 Control flow graph
+![](diagrams/1.jpg)
 
+![](diagrams/2.jpg)
 
 ## 1.2 Code Quality analysis
 
